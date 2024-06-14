@@ -1,6 +1,4 @@
 res://Assets/Scenes/Demo.tscn
-res://Assets/Components/Button3D.gd
-res://Assets/Components/RayCastBtn3D.gd
-res://Assets/Components/VariablePitchAudioStreamPlayer3D.gd
-res://Assets/Components/Button3D-WithSounds.gd
-res://Assets/Scenes/Button3D-WithSounds.tscn
+res://addons/cyclops_level_builder/shaders/outline_shader.tres
+res://addons/cyclops_level_builder/docks/material_palette/thumbnail_selected_theme.tres
+res://addons/cyclops_level_builder/docks/material_palette/thumbnail_normal_theme.tres

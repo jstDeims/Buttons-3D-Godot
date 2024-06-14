@@ -1,3 +1,86 @@
-[gd_scene format=3 uid="uid://u6sal34dqh2r"]
+[gd_scene load_steps=9 format=3 uid="uid://u6sal34dqh2r"]
+
+[ext_resource type="Script" path="res://Assets/Components/Button3D-WithSounds.gd" id="1_si26p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x4dhw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_16kdp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovql2"]
+albedo_color = Color(1, 0.376077, 0.210194, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jwg1g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ue3rd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdnpl"]
+albedo_color = Color(3.99485e-06, 0.711864, 0.329862, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dyi1h"]
+albedo_color = Color(3.85046e-07, 0.633278, 0.669245, 1)
 
 [node name="Demo" type="Node3D"]
+
+[node name="Collisions" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Collisions"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_x4dhw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D"]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_16kdp")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Collisions"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 5, -9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Collisions/StaticBody3D2"]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.5, 0)
+mesh = SubResource("BoxMesh_x4dhw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collisions/StaticBody3D2"]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 10, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_16kdp")
+
+[node name="Buttons" type="Node3D" parent="."]
+
+[node name="Button3DWithSounds" type="Area3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.87854, -9.49405)
+script = ExtResource("1_si26p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Buttons/Button3DWithSounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.684143)
+material_override = SubResource("StandardMaterial3D_ovql2")
+mesh = SubResource("BoxMesh_jwg1g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Button3DWithSounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.684143)
+shape = SubResource("BoxShape3D_ue3rd")
+
+[node name="Button3DWithSounds2" type="Area3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.72965, 2.87854, -9.49405)
+script = ExtResource("1_si26p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Buttons/Button3DWithSounds2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.684143)
+material_override = SubResource("StandardMaterial3D_hdnpl")
+mesh = SubResource("BoxMesh_jwg1g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Button3DWithSounds2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.684143)
+shape = SubResource("BoxShape3D_ue3rd")
+
+[node name="Button3DWithSounds3" type="Area3D" parent="Buttons"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.95276, 2.87854, -9.49405)
+script = ExtResource("1_si26p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Buttons/Button3DWithSounds3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.684143)
+material_override = SubResource("StandardMaterial3D_dyi1h")
+mesh = SubResource("BoxMesh_jwg1g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Buttons/Button3DWithSounds3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.684143)
+shape = SubResource("BoxShape3D_ue3rd")
