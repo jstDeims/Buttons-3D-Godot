@@ -1,3 +1,4 @@
+# Originally taken of https://github.com/uheartbeast/Galaxy-Defiance.git
 # Give the component a class name so it can be instanced as a custom node
 class_name VariablePitchAudioStreamPlayer3D
 extends AudioStreamPlayer3D
@@ -21,6 +22,7 @@ func _ready() -> void:
 		play_with_variance()
 
 # This is the function for playing the sound using a variance in the pitch
+
 func play_with_variance() -> void:
 	if !stream: return
 	# Set the pitch scale before playing the sound (picking a random amount between the minimum and maximum)

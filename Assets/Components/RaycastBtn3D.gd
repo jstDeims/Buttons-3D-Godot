@@ -1,4 +1,4 @@
-class_name RaycastBtn3D
+class_name RayCastBtn3D
 extends RayCast3D
 
 var once = true

@@ -1,1 +1,6 @@
 res://Assets/Scenes/Demo.tscn
+res://Assets/Components/Button3D.gd
+res://Assets/Components/RayCastBtn3D.gd
+res://Assets/Components/VariablePitchAudioStreamPlayer3D.gd
+res://Assets/Components/Button3D-WithSounds.gd
+res://Assets/Scenes/Button3D-WithSounds.tscn
